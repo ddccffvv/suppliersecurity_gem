@@ -1,8 +1,10 @@
-# SuppliersecurityGem
+## About suppliersecurity.info
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/suppliersecurity_gem`. To experiment with that code, run `bin/console` for an interactive prompt.
+Suppliersecurity.info is a service which monitors and catalogs compliance, privacy and security data of the top SaaS companies. More information on our website: https://suppliersecurity.info.
 
-TODO: Delete this and the text above, and describe your gem
+## Prerequisites
+
+Generate an API key at https://suppliersecurity.info/api_tokens (Authentication required)
 
 ## Installation
 
@@ -22,7 +24,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require "suppliersecurity_gem"
+api = SupplierSecurity::API.new("your token")
+irb(main):003> api.search("fragment of product url")
+```
 
 ## Development
 
