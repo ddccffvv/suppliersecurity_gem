@@ -27,7 +27,7 @@ module SupplierSecurity
       raise NotFoundException, "The product was not found" if response.code == 404
 
       # Parse the JSON response into a hash
-      JSON.parse(response.body)
+      JSON.parse(response.body)["products"]
 
     end
   end
